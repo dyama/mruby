@@ -16,7 +16,7 @@ static void
 printstr(mrb_state *mrb, mrb_value obj)
 {
   if (mrb_string_p(obj)) {
-#if defined(_WIN32)
+#ifdef _MSC_VER
     if (isatty(fileno(stdout))) {
       DWORD written;
       int mlen = RSTRING_LEN(obj);
