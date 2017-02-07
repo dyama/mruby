@@ -957,7 +957,7 @@ MRB_API mrb_value mrb_str_new_cstr(mrb_state*, const char*);
 MRB_API mrb_value mrb_str_new_static(mrb_state *mrb, const char *p, size_t len);
 #define mrb_str_new_lit(mrb, lit) mrb_str_new_static(mrb, (lit), mrb_strlen_lit(lit))
 
-#ifdef _WIN32
+#ifdef _MSC_VER
 char* mrb_utf8_from_locale(const char *p, size_t len);
 char* mrb_locale_from_utf8(const char *p, size_t len);
 #define mrb_locale_free(p) free(p)
