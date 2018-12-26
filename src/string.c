@@ -577,7 +577,7 @@ mrb_str_strlen(mrb_state *mrb, struct RString *s)
   return max;
 }
 
-#ifdef _WIN32
+#ifdef _MSC_VER
 #include <windows.h>
 
 char*
